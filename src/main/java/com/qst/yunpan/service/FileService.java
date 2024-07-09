@@ -68,7 +68,8 @@ public class FileService {
      * @return
      */
     public String getFileName(HttpServletRequest request, String fileName) {
-        fileName= fileName.replace("\\", "//");
+        if(fileName != null)
+            fileName= fileName.replace("\\", "//");
         if (fileName == null||fileName.equals("\\")) {
             System.out.println(1);
             fileName = "";
