@@ -286,14 +286,6 @@ public class FileController {
             e.printStackTrace();
         }
     }
-    /*
-     * 将路径和文件名传入model，再返回给前台打开，即播放音乐
-     */
-    @RequestMapping("/openAudioPage")
-    public String openAudioPage(Model model, String currentPath, String fileName) {
-        model.addAttribute("currentPath", currentPath);
-        model.addAttribute("fileName", fileName);
-        return "audio";
-    }
+
 
 }
